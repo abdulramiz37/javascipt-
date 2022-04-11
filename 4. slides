@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 50vw;
+            height: 50vh;
+            border: 2px solid black;
+
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;        }
+
+            .mabu1{
+               margin-left: 550px;
+            }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <h2 class="big container">Slideshow</h2>
+
+    <div class="container">
+               <img class="mySlides" src="https://th.bing.com/th/id/OIP.9KY9Qd_hiU2CUdSF2UkWoQHaE7?pid=ImgDet&rs=1" >
+        <img class="mySlides" src="https://www.pixelstalk.net/wp-content/uploads/2016/09/Desktop-Nature-Landscape-Images-Pics.jpg" >
+        <img class="mySlides" src="https://th.bing.com/th/id/R.53449fa87702af80374c45b87080c639?rik=EqbG9NyxWahaLA&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f08%2fBest-Pictures-HD-Nature-Download.jpg&ehk=zzR2O0LOgXD7i5uGAv35H%2b0e2dQ0Sd14MUiRxCFsUJU%3d&risl=&pid=ImgRaw&r=0" >
+        <img class="mySlides" src="https://million-wallpapers.com/wallpapers/1/85/17779089886909635971.jpg" >
+
+
+    </div>
+    <button class="mabu1" onclick="pDivs(-1)">Previous</button>
+    <button class="mabu" onclick="pDivs(1)">Forward</button>
+
+    <script>
+        var slideIndex = 1;
+        Divs(slideIndex);
+
+        function pDivs(n) {
+            Divs(slideIndex += n);
+        }
+
+        function Divs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
