@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div>
+        <input type="text">
+        <button>get value</button>
+        <h1>hi</h1>
+    </div>
+    <script>
+  
+            const url =  new URL('https://www.starbeat.com/path?greeting=hi&language=en_us&language=en_uk&name=world');
+          const url2 =new  URLSearchParams(url.search);
+          
+             console.log(url2);
+
+            //  const myName = url2.get('language');
+            //  console.log(`${myName}`);
+
+            url2.forEach(abdul=(value,key)=>{
+                // console.log(value,key);
+              
+                if(key=="greeting"){
+                    console.log(key+ ":" +value);
+                }
+            
+          
+
+
+            })
